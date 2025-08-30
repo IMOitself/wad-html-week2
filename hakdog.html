@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Student Information Portal</h1>
+    <p>
+        Review the available courses in the table below, then complete the registration form
+    </p>
+
+    <h2>Available Courses</h2>
+    <table border="1" width="100%">
+        <caption>Computer Science Department Courses - A.Y 2026</caption>
+        <tr>
+            <th rowspan="2">Course Code</th>
+            <th rowspan="2">Course Name</th>
+            <th colspan="2">Schedule</th>
+        </tr>
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+        </tr>
+        <tr>
+            <td>CS101</td>
+            <td>Introduction to Programming</td>
+            <td>Mon & Wed</td>
+            <td>9:00-10:30 AM</td>
+        </tr>
+        <tr>
+            <td>CS102</td>
+            <td>Web Development Systems</td>
+            <td>Tue & Thu</td>
+            <td>9:00-10:30 AM</td>
+        </tr>
+        <tr>
+            <td>CS103</td>
+            <td>Database Systems</td>
+            <td rowspan="2">Fri</td>
+            <td>9:00-10:30 AM</td>
+        </tr>
+        <tr>
+            <td>CS104</td>
+            <td>Computer Network</td>
+            <td>9:00-10:30 AM</td>
+        </tr>
+    </table>
+
+    <form action="./futlong.html" method="post">
+        <fieldset>
+            <legend>
+                <h2>Registration Form</h2>
+            </legend>
+            <label for="name">Full Name: </label>
+            <input id="name" name="name" type="text" placeholder="Basta pangalan" />
+            <br>
+            <br>
+            <label for="email">Email Adress: </label>
+            <input id="email" name="email" type="email" placeholder="Basta email" />
+            <br>
+            <br>
+
+            <!-- Radio -->
+            <p>Year Level:</p>
+            <input type="radio" name="radio" id="first" value="1st Year" required>
+            <label for="first">1st Year</label><br>
+
+            <input type="radio" name="radio" id="second" value="2nd Year">
+            <label for="second">2nd Year</label><br>
+
+            <input type="radio" name="radio" id="third" value="3rd Year">
+            <label for="third">3rd Year</label><br>
+
+            <input type="radio" name="radio" id="fourth" value="4th Year">
+            <label for="fourth">4th Year</label><br>
+
+            <input type="radio" name="radio" id="tesda" value="tesda">
+            <label for="tesda">Mag tesda ka nalang</label><br>
+
+            <!-- Checkbox -->
+            <p>Preferred Study Mode: (Optional)</p>
+            <input type="checkbox" id="online" name="mode" value="Online">
+            <label for="online">Online</label><br>
+            <input type="checkbox" id="onsite" name="mode" value="Onsite">
+            <label for="onsite">Onsite</label><br><br>
+
+            <!-- Select -->
+            <label for="course">Select Course:</label>
+            <select name="course" id="course">
+                <option value="">---Choose a Course---</option>
+                <option value="CS101">CS101 - Introduction to Programming</option>
+                <option value="CS102">CS102 - Web Development Basics</option>
+                <option value="CS103">CS103 - Database System</option>
+                <option value="CS104">CS104 - Computer Networks</option>
+            </select>
+            <br>
+            <br>
+
+            <!-- Text Area -->
+            <label for="comments">Additional Note:</label><br>
+            <textarea name="comments" id="comments" rows="4" cols="40"
+                placeholder="Basta lagyan mo kung gusto mo..."></textarea><br>
+
+            <!-- Button -->
+            <button type="submit">Register</button>
+            <button type="reset">Clear Form</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
