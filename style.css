@@ -1,0 +1,147 @@
+/* UNIVERSAL SELECTOR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(239, 230, 145);
+}
+/* ELEMENT SELECTOR */
+body {
+    font-family: Lucida Console, monospace;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #54556d, #2c2944);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* CLASS SELECTOR */
+.desc {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* DESCENDANT SELECTOR */
+table caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #2c2944;
+    box-shadow: 0px 0px 25px rgba(221, 204, 244, 0.25);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #333754;
+}
+
+tr:nth-child(even) {
+    background: #26213888;
+}
+
+#registration-form {
+    background: #2c2944;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#registration-form h2 {
+    margin-bottom: 14px;
+}
+
+.form-group {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+input, select, textarea {
+    padding: 10px;
+    margin-top: 4px;
+    width: 100%;
+    border: 2px solid rgb(239, 230, 145);
+    border-radius: 3px;
+    background-color: #2c294400;
+}
+
+/* ATTRIBUTE SELECTOR */
+input[type="radio"] ,
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+input[required] {
+    border-left: 4px solid rgb(234, 192, 108);
+}
+
+/* PSEUDO-CLASS SELECTORS */
+input:focus,
+select:focus,
+textarea:focus {
+    border-left: 4px solid #333754;
+}
+
+button {
+    padding: 10px 14px;
+    margin-top: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+button[type="submit"] {
+    color: #333754;
+    background-color: rgb(234, 192, 108);
+}
+
+button[type="submit"]:hover {
+    color: rgb(234, 192, 108);
+    background: #333754;
+}
+
+button[type="reset"] {
+    background: #333754;
+}
+
+button[type="reset"]:hover {
+    background: #333754;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 3fr;
+    }
+}
